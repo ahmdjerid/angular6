@@ -3,6 +3,9 @@ import {Hero} from '../hero';
 import { HeroService } from '../hero.service';
 
 
+
+
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -18,14 +21,16 @@ export class HeroesComponent implements OnInit {
   };
 
   onSelect(hero:Hero):void{
-      this.selectedHero = hero;
-      
+      this.selectedHero = hero; 
     }
-
     heroes: Hero[];
 
 
-  constructor(private heroService: HeroService) {     
+  constructor(
+    private heroService: HeroService,
+
+    
+    ) {     
   }
 
   ngOnInit() { 
